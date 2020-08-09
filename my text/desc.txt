@@ -1,0 +1,82 @@
+1. 
+line.per.peak = 5 (dna)
+word.per.line = 100 (rna)
+embedding = 100
+ngrams = 3
+lr = 0.1
+epoch = 10
+
+2. 
+line.per.peak = 5 (dna)
+word.per.line = 100 (rna)
+embedding = 50
+ngrams = 3
+lr = 0.1
+epoch = 10
+
+3. 
+line.per.peak = 5 (dna)
+word.per.line = 100 (rna)
+embedding = 15
+ngrams = 3
+lr = 0.1
+epoch = 10
+
+4. 
+line.per.peak = 10 (dna)
+word.per.line = 100 (rna)
+line.per.cell = 10 (rna)
+embedding = 15
+ngrams = 3
+lr = 0.1
+epoch = 30
+
+5. 
+line.per.peak = 10 (dna)
+word.per.line = 100 (rna)
+line.per.cell = 10 (rna)
+embedding = 30
+ngrams = 3
+lr = 0.1
+epoch = 30
+
+6. 
+line.per.peak = 15 (dna): 8G for DNA file
+word.per.line = 100 (rna)
+line.per.cell = 30 (rna)
+embedding = 15
+ngrams = 5
+lr = 0.1
+epoch = 50
+
+7. 
+line.per.peak = 15 (dna): 8G for DNA file
+word.per.line = 100 (rna)
+line.per.cell = 30 (rna)
+embedding = 15
+ngrams = 5
+lr = 0.2 (0.1 for RNA)
+epoch = 100 (50 for RNA bc no going down any more)
+
+8. 
+line.per.peak = 15 (dna): 8G for DNA file
+word.per.line = 100 (rna)
+line.per.cell = 30 (rna)
+embedding = 20
+ngrams = 5
+lr = 0.3 (0.1 for RNA)
+epoch = 100 (50 for RNA bc no going down any more)
+
+101. P0 cortex data
+line.per.peak = 15 (dna): >14G for DNA file
+word.per.line = 100 (rna)
+line.per.cell = 30 (rna)
+embedding = 20
+ngrams = 5
+lr = 0.3 (0.1 for RNA)
+epoch = 100 (50 for RNA bc no going down any more)
+
+
+
+
+

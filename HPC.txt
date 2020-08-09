@@ -1,0 +1,16 @@
+scp songyang@best-linux.cs.wisc.edu:/u/s/o/songyang/private/cellspace/testss.sh .
+
+scp Cell* songyang@best-linux.cs.wisc.edu:/u/s/o/songyang/private/cellspace/output/
+
+./CellSpace train ./data/dna_transposed.counts.mtx ./data/ref_seq ./data/peaks.bed ./data/chromatin.barcodes.tsv ./output/dna_lpp11.txt -nt 20 -k 8 -sd 30 -sl 50 -lpp 11
+
+./CellSpace train ./data/v1_adult_brain/v1_dna_t.counts.mtx ./data/ref_seq ./data/v1_adult_brain/peaks3.bed ./data/v1_adult_brain/barcodes.tsv ./output/v1_dna_lpp15.txt -nt 20 -k 8 -sd 30 -sl 50 -lpp 15
+
+cat dna_lpp10.txt rna_gpc100.txt > merge_v2.txt
+
+tail -n 5 rna.txt
+
+sed -i 's/\r//g' FileWithCarriageReturns.sh
+
+g++ -pthread -g -Wall -std=c++17 TestSeq.cpp -o TestSeq 
+

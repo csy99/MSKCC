@@ -1,0 +1,4 @@
+For RNA data, the loss stops declining after 27 epochs. 
+
+For DNA data, the loss has potential to decline after 30 epochs. 
+

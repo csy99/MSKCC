@@ -1,0 +1,47 @@
+for the toy example: (run by a java program)
+Entity Count 13, Total count: 23
+The cnt for /m/01qscs is 11
+The cnt for /m/02x73k6 is 1
+The cnt for /m/05strv is 1
+The cnt for /m/02p65p is 1
+The cnt for /m/02z13jg is 1
+The cnt for /m/09c7w0 is 1
+The cnt for /film/film/genre is 1
+The cnt for /m/03mqtr is 1
+The cnt for /m/01tfck is 2
+The cnt for /m/0kjgl is 1
+The cnt for /award/award_winner/awards_won./award/award_honor/award is 1
+The cnt for /film/film/produced_by is 1
+The cnt for /m/09sdmz is 1
+The cnt for /award/award_nominee/award_nominations./award/award_nomination/award_nominee is 1
+The cnt for /award/award_category/winners./award/award_honor/award_winner is 2
+The cnt for /m/02x8n1n is 1
+The cnt for /film/film/release_date_s./film/film_regional_release_date/film_release_region is 1
+The cnt for /film/film/starring./film/performance/actor is 1
+The cnt for /award/award_nominee/award_nominations./award/award_nomination/award is 2
+The cnt for /award/award_winner/awards_won./award/award_honor/honored_for is 1
+The cnt for /award/award_winner/awards_won./award/award_honor/award_winner is 3
+The cnt for /m/0fm3h2 is 1
+The cnt for /m/09cr8 is 5
+
+mode 0: hit@1: 0.571429 hit@10: 1 hit@20: 1 hit@50: 1 mean ranks : 2.42857 Total examples : 28
+mode 4: hit@1: 0.5 hit@10: 0.892857 hit@20: 1 hit@50: 1 mean ranks : 3.71429 Total examples : 28
+
+
+findings:
+1. fixed: there may be a bug with implementation, the last line of the input data is not converted
+2. in mode 0: each line will be converted into two examples: relation with two directions
+	each entity in the training example will be represented as both self-entity and self-label in prediction, 
+	no matter if this entity appear as an entity/label in the training example. 
+	In addition, the embeddings for self-entity and self-label are very different different. 
+3. in mode 4: relation with two labels
+	the embeddings for directions and its reverse one is more similar (or we do not even need to create a reverse one)
+4. when embedding size is smaller, the training error is larger
+
+
+questions:
+1. how do they exactly do the embeddings? (StarSpace and ur code)
+2. test mode verbose not doing a great job
+3. mode 4
+4. toy data for your code
+5. each entity may be represented by different entities in ur code.

@@ -1,0 +1,13 @@
+RNA:
+run RNA.r to process sc-RNA data and output to rna.txt.
+
+DNA:
+run CellSpace to process sc-ATAC data output to dna.txt. 
+
+Combined:
+Concat rna.txt and dna.txt into one file merge.txt.
+run StarSpace.
+download the embedding file. 
+
+Downstream Analysis:
+clustering. 
